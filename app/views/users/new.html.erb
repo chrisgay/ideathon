@@ -1,0 +1,41 @@
+<div>
+	<nav class="top-bar">
+	 <section class="top-bar-section">
+		<ul class="left">
+			<li class="divider"></li>
+			<li class="active"><a href="http://blooming-woodland-6670.herokuapp.com/">Home</a></li> 
+	   		<li class="divider"></li>
+			<li class="active"><a href="#">VIP Member</a></li>
+	   		<li class="divider"></li>
+			<li class="active"><a href="#">Experiences</a></li>
+	   		<li class="divider"></li>
+			<li class="active"><a href="#">Moments</a></li>
+	   		<li class="divider"></li>
+			<li class="active"><a href="#">Awards</a></li>			
+		</ul>
+	 </section>
+	 </nav>     
+</div>
+
+
+<h1>Sign-up Form</h1>
+
+<%= form_for(:user, :url => {:action => 'create'}) do |f|%>
+	
+	<table>
+		<tr>
+			<th> First Name </th>
+			<td><%= f.text_field(:first_name)%></td>
+		</tr>
+		<tr>
+			<th> Last Name </th>
+			<td><%= f.text_field(:last_name)%></td>
+		</tr>
+		<tr>
+			<th> Email </th>
+			<td><%= f.text_field(:email)%></td>
+		</tr>
+	</table>
+	
+<%= f.submit "Submit", :class => "large button" %>
+<% end %>
